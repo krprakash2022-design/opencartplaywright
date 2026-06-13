@@ -1,0 +1,310 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: EndToEndTest.spec.ts >> execute end-to-end test flow @end-to-end
+- Location: tests\EndToEndTest.spec.ts:30:5
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: true
+Received: false
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - button "$ Currency " [ref=e7] [cursor=pointer]:
+        - strong [ref=e8]: $
+        - text: Currency
+        - generic [ref=e9]: 
+      - list [ref=e11]:
+        - listitem [ref=e12]:
+          - link "" [ref=e13] [cursor=pointer]:
+            - /url: https://tutorialsninja.com/demo/index.php?route=information/contact
+            - generic [ref=e14]: 
+          - text: "123456789"
+        - listitem [ref=e15]:
+          - link " My Account" [ref=e16] [cursor=pointer]:
+            - /url: https://tutorialsninja.com/demo/index.php?route=account/account
+            - generic [ref=e17]: 
+            - text: My Account
+        - listitem [ref=e19]:
+          - link " Wish List (0)" [ref=e20] [cursor=pointer]:
+            - /url: https://tutorialsninja.com/demo/index.php?route=account/wishlist
+            - generic [ref=e21]: 
+            - text: Wish List (0)
+        - listitem [ref=e22]:
+          - link " Shopping Cart" [ref=e23] [cursor=pointer]:
+            - /url: https://tutorialsninja.com/demo/index.php?route=checkout/cart
+            - generic [ref=e24]: 
+            - text: Shopping Cart
+        - listitem [ref=e25]:
+          - link " Checkout" [ref=e26] [cursor=pointer]:
+            - /url: https://tutorialsninja.com/demo/index.php?route=checkout/checkout
+            - generic [ref=e27]: 
+            - text: Checkout
+  - banner [ref=e28]:
+    - generic [ref=e30]:
+      - heading "Qafox.com" [level=1] [ref=e33]:
+        - link "Qafox.com" [ref=e34] [cursor=pointer]:
+          - /url: https://tutorialsninja.com/demo/index.php?route=common/home
+      - generic [ref=e36]:
+        - textbox "Search" [ref=e37]: iPhone
+        - button "" [ref=e39] [cursor=pointer]:
+          - generic [ref=e40]: 
+      - button " 0 item(s) - $0.00" [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]: 
+        - text: 0 item(s) - $0.00
+  - navigation [ref=e46]:
+    - generic: 
+    - list [ref=e48]:
+      - listitem [ref=e49]:
+        - link "Desktops" [ref=e50] [cursor=pointer]:
+          - /url: https://tutorialsninja.com/demo/index.php?route=product/category&path=20
+      - listitem [ref=e51]:
+        - link "Laptops & Notebooks" [ref=e52] [cursor=pointer]:
+          - /url: https://tutorialsninja.com/demo/index.php?route=product/category&path=18
+      - listitem [ref=e53]:
+        - link "Components" [ref=e54] [cursor=pointer]:
+          - /url: https://tutorialsninja.com/demo/index.php?route=product/category&path=25
+      - listitem [ref=e55]:
+        - link "Tablets" [ref=e56] [cursor=pointer]:
+          - /url: https://tutorialsninja.com/demo/index.php?route=product/category&path=57
+      - listitem [ref=e57]:
+        - link "Software" [ref=e58] [cursor=pointer]:
+          - /url: https://tutorialsninja.com/demo/index.php?route=product/category&path=17
+      - listitem [ref=e59]:
+        - link "Phones & PDAs" [ref=e60] [cursor=pointer]:
+          - /url: https://tutorialsninja.com/demo/index.php?route=product/category&path=24
+      - listitem [ref=e61]:
+        - link "Cameras" [ref=e62] [cursor=pointer]:
+          - /url: https://tutorialsninja.com/demo/index.php?route=product/category&path=33
+      - listitem [ref=e63]:
+        - link "MP3 Players" [ref=e64] [cursor=pointer]:
+          - /url: https://tutorialsninja.com/demo/index.php?route=product/category&path=34
+  - generic [ref=e65]:
+    - list [ref=e66]:
+      - listitem [ref=e67]:
+        - link "" [ref=e68] [cursor=pointer]:
+          - /url: https://tutorialsninja.com/demo/index.php?route=common/home
+          - generic [ref=e69]: 
+      - listitem [ref=e70]:
+        - link "Search" [ref=e71] [cursor=pointer]:
+          - /url: https://tutorialsninja.com/demo/index.php?route=product/search&search=iPhone
+      - listitem [ref=e72]:
+        - link "iPhone" [ref=e73] [cursor=pointer]:
+          - /url: https://tutorialsninja.com/demo/index.php?route=product/product&search=iPhone&product_id=40
+    - generic [ref=e76]:
+      - generic [ref=e77]:
+        - list [ref=e78]:
+          - listitem [ref=e79]:
+            - link "iPhone" [ref=e80] [cursor=pointer]:
+              - /url: https://tutorialsninja.com/demo/image/cache/catalog/demo/iphone_1-500x500.jpg
+              - img "iPhone" [ref=e81]
+          - listitem [ref=e82]:
+            - link "iPhone" [ref=e83] [cursor=pointer]:
+              - /url: https://tutorialsninja.com/demo/image/cache/catalog/demo/iphone_6-500x500.jpg
+              - img "iPhone" [ref=e84]
+          - listitem [ref=e85]:
+            - link "iPhone" [ref=e86] [cursor=pointer]:
+              - /url: https://tutorialsninja.com/demo/image/cache/catalog/demo/iphone_2-500x500.jpg
+              - img "iPhone" [ref=e87]
+          - listitem [ref=e88]:
+            - link "iPhone" [ref=e89] [cursor=pointer]:
+              - /url: https://tutorialsninja.com/demo/image/cache/catalog/demo/iphone_5-500x500.jpg
+              - img "iPhone" [ref=e90]
+          - listitem [ref=e91]:
+            - link "iPhone" [ref=e92] [cursor=pointer]:
+              - /url: https://tutorialsninja.com/demo/image/cache/catalog/demo/iphone_3-500x500.jpg
+              - img "iPhone" [ref=e93]
+          - listitem [ref=e94]:
+            - link "iPhone" [ref=e95] [cursor=pointer]:
+              - /url: https://tutorialsninja.com/demo/image/cache/catalog/demo/iphone_4-500x500.jpg
+              - img "iPhone" [ref=e96]
+        - list [ref=e97]:
+          - listitem [ref=e98]:
+            - link "Description" [ref=e99]:
+              - /url: "#tab-description"
+          - listitem [ref=e100]:
+            - link "Reviews (0)" [ref=e101] [cursor=pointer]:
+              - /url: "#tab-review"
+        - generic [ref=e102]:
+          - paragraph [ref=e104]: iPhone is a revolutionary new mobile phone that allows you to make a call by simply tapping a name or number in your address book, a favorites list, or a call log. It also automatically syncs all your contacts from a PC, Mac, or Internet service. And it lets you select and listen to voicemail messages in whatever order you want just like email.
+          - text: "* * *"
+      - generic [ref=e105]:
+        - generic [ref=e106]:
+          - button "" [ref=e107] [cursor=pointer]:
+            - generic [ref=e108]: 
+          - button "" [ref=e109] [cursor=pointer]:
+            - generic [ref=e110]: 
+        - heading "iPhone" [level=1] [ref=e111]
+        - list [ref=e112]:
+          - listitem [ref=e113]:
+            - text: "Brand:"
+            - link "Apple" [ref=e114] [cursor=pointer]:
+              - /url: https://tutorialsninja.com/demo/index.php?route=product/manufacturer/info&manufacturer_id=8
+          - listitem [ref=e115]: Product Code:product 11
+          - listitem [ref=e116]: Availability:Out Of Stock
+        - list [ref=e117]:
+          - listitem [ref=e118]:
+            - heading "$123.20" [level=2] [ref=e119]
+          - listitem [ref=e120]: Ex Tax:$101.00
+        - generic [ref=e122]:
+          - generic [ref=e123]: Qty
+          - textbox "Qty" [ref=e124]: "1"
+          - button "Add to Cart" [active] [ref=e125] [cursor=pointer]
+        - generic [ref=e126]:
+          - paragraph [ref=e127]:
+            - generic [ref=e129]: 
+            - generic [ref=e131]: 
+            - generic [ref=e133]: 
+            - generic [ref=e135]: 
+            - generic [ref=e137]: 
+            - link "0 reviews" [ref=e138] [cursor=pointer]:
+              - /url: ""
+            - text: /
+            - link "Write a review" [ref=e139] [cursor=pointer]:
+              - /url: ""
+          - separator [ref=e140]
+```
+
+# Test source
+
+```ts
+  58  | });
+  59  | 
+  60  | 
+  61  | // Function to register a new user account
+  62  | async function performRegistration(page: Page): Promise<string> {
+  63  |     const homePage = new Homepage(page);
+  64  |     await homePage.myaccount()       // Click "My Account" link
+  65  |     await homePage.register()       // Click "Register" option
+  66  | 
+  67  |     const registrationPage = new register(page);
+  68  | 
+  69  |     // Fill in random user details
+  70  |     await registrationPage.fillfirstname(RandomDataGenerator.randomFirstName());
+  71  |     await registrationPage.filllastname(RandomDataGenerator.randomLastName())
+  72  | 
+  73  |     let email: string = RandomDataGenerator.randomEmail()
+  74  |     await registrationPage.fillemail(email)
+  75  |     await registrationPage.filltelephone(RandomDataGenerator.randomPhoneNumber())
+  76  | 
+  77  |     await registrationPage.fillpassword("Ravi6303@")
+  78  |     await registrationPage.fillconfirmpassword("Ravi6303@")
+  79  | 
+  80  |     await registrationPage.checkprivacy()  // Accept the privacy policy
+  81  |     await registrationPage.clickcontinue()     // Submit the registration form
+  82  | 
+  83  |     // Validate that the registration was successful
+  84  |     const confirmationMsg = await registrationPage.confirmmessage()
+  85  |     expect(confirmationMsg).toContain('Your Account Has Been Created!');
+  86  | 
+  87  |     return email; // Return the email for later use in login
+  88  | }
+  89  | 
+  90  | 
+  91  | // Function to log out the current user
+  92  | async function performLogout(page: Page) {
+  93  |     const myAccountPage = new Myaccount(page);
+  94  |      await myAccountPage.logout()
+  95  | 
+  96  |     // Ensure the "Continue" button is visible
+  97  |         const logout1= new LogoutPage(page)
+  98  |        expect(await logout1.isContinueButtonVisible()).toBe(true);
+  99  | 
+  100 |     // Click "Continue" and verify redirection to HomePage
+  101 |          const home:Homepage= await logout1.clickContinue();
+  102 |             expect(await home.Homepage()).toBe(true)
+  103 | }
+  104 | 
+  105 | 
+  106 | // Function to log in using the registered email
+  107 | async function performLogin(page: Page, email: string) {
+  108 |     const config = new TestConfig();
+  109 |     await page.goto(config.appurl);  // Reload home page
+  110 | 
+  111 |     const homePage = new Homepage(page);
+  112 |     await homePage.myaccount();
+  113 |     await homePage.login();
+  114 | 
+  115 |     const loginPage = new loginpage(page);
+  116 |     await loginPage.fillemai("krprakash2022@gmail.com")  // Use the registered credentials
+  117 |    await loginPage.fillpassword("Ravi6303@")
+  118 | 
+  119 |     // Verify login by checking My Account page
+  120 |     const myAccountPage = new Myaccount(page);
+  121 |     expect(await myAccountPage.myaccountheading()).toBeTruthy();
+  122 | }
+  123 | 
+  124 | 
+  125 | // Function to search for a product and add it to cart
+  126 | async function addProductToCart(page: Page) {
+  127 |     const homePage = new Homepage(page);
+  128 | 
+  129 |     const config = new TestConfig();
+  130 |     const productName: string = config.productName;
+  131 |     const productQuantity: string = config.productQuantity;
+  132 | 
+  133 |     await homePage.enterProductName(productName);
+  134 |     await homePage.searchbutton1()  // Click on search button
+  135 | 
+  136 |     const searchResultsPage = new SearchResultsPage(page);
+  137 | 
+  138 |     // Validate search results page
+  139 |     expect(await searchResultsPage.isSearchResultsPageExists()).toBeTruthy();
+  140 | 
+  141 |     // Validate that the desired product exists in the results
+  142 |     expect(await searchResultsPage.isProductExist(productName)).toBeTruthy();
+  143 | 
+  144 |     // Select product and set quantity
+  145 |     await searchResultsPage.selectProduct(productName);
+  146 | 
+  147 |           const productPage =new ProductPage(page);
+  148 |          await productPage.setQuantity(config.productQuantity)
+  149 |         
+  150 |         await productPage.addToCart();
+  151 |     //await productPage?.setQuantity(productQuantity);
+  152 |    // await productPage?.addToCart();  // Add product to shopping cart
+  153 | 
+  154 |     await page.waitForTimeout(3000); // Wait to simulate user delay
+  155 | 
+  156 |     // Confirm product was added
+  157 |    // expect(await productPage?.isConfirmationMessageVisible()).toBe(true);
+> 158 |   expect(await productPage.isConfirmationMessageVisible()).toBe(true);
+      |                                                            ^ Error: expect(received).toBe(expected) // Object.is equality
+  159 |  await productPage.clickItemsToNavigateToCart();
+  160 | await productPage.clickviewcart()
+  161 | }
+  162 | 
+  163 | 
+  164 | // Function to verify the shopping cart details
+  165 | async function verifyShoppingCart(page: Page) {
+  166 |     const productPage = new ProductPage(page);
+  167 | 
+  168 |     // Navigate to shopping cart from product page
+  169 |     await productPage.clickItemsToNavigateToCart();
+  170 |     const shoppingCartPage :ShoppingCartPage= await productPage.clickviewcart()
+  171 | 
+  172 |     console.log("🛒 Navigated to shopping cart!");
+  173 | 
+  174 | 
+  175 | 
+  176 |     // const shoppingCartPage =new ShoppingCartPage(page)
+  177 |     const config = new TestConfig();
+  178 | 
+  179 |     // Validate that total price is correct (based on config)
+  180 |     expect(await shoppingCartPage.getTotalPrice()).toBe(config.totalPrice);
+  181 | }
+```
